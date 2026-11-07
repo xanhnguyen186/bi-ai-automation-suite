@@ -1,20 +1,8 @@
-# n8n Code node (Python) - mode: "Run Once for All Items"
-# Input (via a Merge node, append mode) = three kinds of items, recognised by their fields:
-#   1) cleaned orders (from the Data Cleaning node)  -> have "net_revenue"
-#   2) order lines (orders_detail sheet)             -> have "detail_id"   (several lines per order)
-#   3) products (products sheet)                     -> have "product_name_raw"
-# Product numbers come from the LINES (joined to completed orders), never from one product per order.
-# Output: ONE row =
-#   4 KPI values (with change vs previous month), store facts for the LLM,
-#   the best product and best store of the month, and 4 ready-made QuickChart request bodies (the 4 charts).
-# The KPI cards, chart titles and feature cards are drawn as HTML in the report node.
-# The "latest month" is the newest month found in the data (not today's date). No imports needed.
-
 MAX_PIE_SLICES = 6            # categories beyond this are grouped into "Other"
 TOP_N_SUBCATEGORIES = 5
-BEST_PRODUCT_BY = "revenue"   # "revenue" or "units" - how the best sold product is chosen
-GROUP_VARIANTS = False        # True: group sizes/colours, e.g. "T-Shirt | Black | S" -> "T-Shirt"
-MIN_ORDERS_FOR_MARGIN = 10    # stores need at least this many orders to be ranked on margin
+BEST_PRODUCT_BY = "revenue"   
+GROUP_VARIANTS = False        
+MIN_ORDERS_FOR_MARGIN = 10    
 ACCENT = "#2F5D8A"
 PALETTE = ["#2F5D8A", "#4C9F70", "#E0A030", "#C8553D", "#7A6FBE", "#3FA7C9"]
 OTHER_COLOR = "#B0B7C3"
