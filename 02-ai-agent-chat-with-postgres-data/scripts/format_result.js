@@ -1,4 +1,4 @@
-const TRIGGER_NODE = 'Manual Trigger';   
+const TRIGGER_NODE = 'When Executed by Another Workflow';   
 const QUESTION_FIELD = 'question';                          
 const VALIDATION_NODE = 'Query Validation';                 
 const MAX_ROWS_TO_AGENT = 50;                               
