@@ -2,7 +2,7 @@
 
 **Automated retail reporting with n8n and generative AI, with a human approval step before anything is sent.**
 
-![Final report email](docs/final_report_email.png)
+![Final report email](docs/email_preview.png)
 
 *The report as the recipients receive it: KPIs, four charts, AI-written takeaways and recommended actions.*
 
