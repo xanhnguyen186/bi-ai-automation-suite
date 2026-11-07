@@ -2,15 +2,31 @@
 
 **Automated retail reporting with n8n and generative AI, with a human approval step before anything is sent.**
 
-![Email report and n8n workflow](docs/email_preview_and_workflow.png)
+![Final report email](docs/final_report_email.png)
 
-*Left and centre: the report email. Right: the n8n workflow behind it.*
+*The report as the recipients receive it: KPIs, four charts, AI-written takeaways and recommended actions.*
 
 ## Overview
 
 Every month a manager needs the same answer: how did the business perform, what changed and what should we do about it. This workflow produces that answer from raw sales data and delivers it as a designed email, with no manual spreadsheet work. A reviewer approves the report before it reaches its recipients.
 
 **Stack:** n8n · Google Sheets · Python · QuickChart · OpenAI (GPT-5) · Gmail
+
+## From raw data to an approved report
+
+**1. The data lands.** About 4,000 order lines sit in a Google Sheet, with duplicates, mixed date formats and amounts stored as text. Nobody touches them.
+
+**2. The workflow builds the report.** It cleans the data, calculates every KPI in code, draws four charts and asks an LLM for one sentence per section. The model only writes words. The numbers come from the calculation step.
+
+**3. A person reviews it before anyone else sees it.** The finished report goes to the reviewer, followed by an approval request that pauses the workflow until they respond.
+
+![Approval request email](docs/approval_request_email.png)
+
+*The approval email. Nothing is sent to the recipients until the reviewer approves.*
+
+**4. Approval releases the report.** On approval the same report goes to the recipients. On rejection the run ends and nothing is sent.
+
+The result is the email at the top of this page, produced with no manual spreadsheet work and one deliberate human check.
 
 ## The problem
 
