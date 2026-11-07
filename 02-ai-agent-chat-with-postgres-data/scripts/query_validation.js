@@ -1,15 +1,11 @@
-// n8n Code node (JavaScript) - mode: "Run Once for All Items" - sits after the SQL-query-Generator.
-// Checks the generated SQL before it reaches the database. Output: one item { sql, valid, unsupported, reason }.
-// The "Valid?" IF node should test {{ $json.valid }}. This is a safety net; the real protection is a read-only database user.
-
 const ALLOWED = ['orders', 'customers', 'order_items', 'products', 'product_category_name_translation'];
 const MAX_ROWS = 100;
 
 // 1. Get the SQL text (different LLM nodes name the field differently)
 const first = $input.first().json;
 let sql = String(first.text || first.output || first.sql || '').trim();
-sql = sql.replace(/^```(?:sql)?/i, '').replace(/```$/, '').trim();   // strip code fences if the model added them
-sql = sql.replace(/;+\s*$/, '').trim();                              // drop the final semicolon
+sql = sql.replace(/^```(?:sql)?/i, '').replace(/```$/, '').trim();   
+sql = sql.replace(/;+\s*$/, '').trim();                              
 
 const fail = (reason) => [{ json: { sql, valid: false, unsupported: false, reason } }];
 
