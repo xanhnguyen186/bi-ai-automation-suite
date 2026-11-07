@@ -15,7 +15,7 @@ Staff ask you questions about sales and delivery performance. You answer using t
 
 ## AVAILABLE TOOL
 
-### query_database
+### database_query
 **Description:** Looks up figures in the database. It writes the SQL, checks it is safe, runs it, and returns the rows.
 
 **Use it when** the user asks for numbers, rankings, trends, comparisons or lists: "how many", "what was", "show me", "top", "which", "compare", "trend".
