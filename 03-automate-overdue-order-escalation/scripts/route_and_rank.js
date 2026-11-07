@@ -1,8 +1,5 @@
-// n8n Code node (JavaScript) - "Run Once for All Items" - name it "Route and Rank".
-// Joins each overdue order to its rule in the escalation sheet, sets severity, groups by owner, ranks, and builds the facts for the LLM.
-// Output: one item per owner team (or one item with has_exceptions=false when nothing is overdue).
-const SQL_NODE = 'Execute a SQL query';   // <- exact name of your Postgres node
-const RULES_NODE = 'Escalation Rules';    // <- exact name of your Google Sheets read node
+const SQL_NODE = 'Execute a SQL query';   
+const RULES_NODE = 'Escalation Rules';
 const TOP_N = 10;
 
 const rows = $(SQL_NODE).all().map(i => i.json).filter(r => r.order_id);
