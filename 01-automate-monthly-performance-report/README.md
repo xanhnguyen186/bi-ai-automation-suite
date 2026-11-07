@@ -84,7 +84,6 @@ Dataset: [Lotus Group Retail Star Schema BI](https://www.kaggle.com/datasets/abd
 
 - [`scripts/`](scripts/): cleaning, KPI and report scripts
 - [`prompts/`](prompts/): the LLM prompt
-- [`workflow/`](workflow/): the n8n workflow export
 - [`docs/`](docs/): screenshots
 
 [Back to the portfolio](../README.md)
