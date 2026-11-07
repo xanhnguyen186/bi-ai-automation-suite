@@ -1,10 +1,5 @@
-# n8n Code node (Python) - mode: "Run Once for All Items"
-# Cleans the SINGLE enriched table (orders_2024 at order-LINE level: one row per product line, order + product columns repeated): trims text, fixes blanks, validates amounts, de-duplicates,
-# and adds the columns needed to track performance (net revenue/profit, week & month keys).
-# No imports needed (n8n's sandbox blocks them).
-
 MISSING_EMPLOYEE = "UNASSIGNED"
-HIGH_VALUE_THRESHOLD = 50000          # flag only (these orders look legitimate: normal margins)
+HIGH_VALUE_THRESHOLD = 50000          
 
 def s(v):
     return "" if v is None else str(v).strip()
