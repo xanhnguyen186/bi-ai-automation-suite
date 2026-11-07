@@ -1,12 +1,7 @@
-// n8n Code node (JavaScript) - mode: "Run Once for All Items" - the "Format Result" node.
-// Both branches of "Valid?" feed this node. It returns ONE item for the agent, and the same item is logged to Google Sheets.
-// Output: { status, message, result, row_count, sql, question, logged_at }
-// IMPORTANT: on the Postgres node, Settings > turn ON "Always Output Data", so a query with zero rows still reaches this node.
-
-const TRIGGER_NODE = 'When Executed by Another Workflow';   // name of your sub-workflow trigger node
-const QUESTION_FIELD = 'question';                          // the input field you defined on that trigger
-const VALIDATION_NODE = 'Query Validation';                 // name of the validation node
-const MAX_ROWS_TO_AGENT = 50;                               // keep the answer short enough for the agent
+const TRIGGER_NODE = 'Manual Trigger';   
+const QUESTION_FIELD = 'question';                          
+const VALIDATION_NODE = 'Query Validation';                 
+const MAX_ROWS_TO_AGENT = 50;                               
 
 const v = $(VALIDATION_NODE).first().json;
 let question = '';
