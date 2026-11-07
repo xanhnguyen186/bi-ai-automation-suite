@@ -9,7 +9,3 @@ Rules:
 - Sentence 1: what is happening and where it is concentrated (states, sellers).
 - Sentence 2: which order to handle first and why.
 - Use only the numbers and names in the FACTS. Never calculate, estimate or invent anything.
-
-## User message
-FACTS:
-{{ $json.facts }}
