@@ -1,5 +1,3 @@
--- Postgres node (Execute Query). Finds orders that are overdue on the chosen date, using only what was known by that date.
--- The date comes from the Edit Fields node, field as_of_date, like 2018-03-15. Blank = latest date in the data.
 WITH p AS (
   SELECT COALESCE(NULLIF('{{ $json.as_of_date }}', '')::date,
                   (SELECT MAX(NULLIF(order_purchase_timestamp::text, '')::timestamp)::date FROM orders)) AS d
