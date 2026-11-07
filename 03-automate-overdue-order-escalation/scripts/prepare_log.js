@@ -1,7 +1,4 @@
-// n8n Code node (JavaScript) - mode: "Run Once for All Items" - name it "Prepare Log".
-// Turns every overdue order into one row for the Google Sheets exception log.
-// Reads the data from the Route node by name, so it works wherever you connect it.
-const ROUTE_NODE = 'Route & Rank';   // <- exact name of your routing Code node
+const ROUTE_NODE = 'Route and Rank';  
 
 const rows = [];
 for (const item of $(ROUTE_NODE).all()) {
