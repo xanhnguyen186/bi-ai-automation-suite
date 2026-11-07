@@ -1,5 +1,3 @@
-// n8n Code node (JavaScript) - mode: "Run Once for Each Item" - name it "Build Message".
-// Sits after the LLM chain. Short, scannable email for one owner team.
 const ROUTE_NODE = 'Route and Rank';
 const TEST_MODE = true;                 // true = send everything to TEST_EMAIL instead of the owner
 const TEST_EMAIL = 'YOUR_EMAIL_HERE';
