@@ -1,6 +1,6 @@
 # AI Insights prompt
 
-Used in the **AI Insights** node (Google Gemini). The `{{ $json.… }}` placeholders are n8n expressions. They are filled with fact lists that the *Calculate KPIs* script has already worked out, so the model never calculates a figure itself.
+Used in the **AI Insights** node (GPT-5). The `{{ $json.… }}` placeholders are n8n expressions. They are filled with fact lists that the *Calculate KPIs* script has already worked out, so the model never calculates a figure itself.
 
 The output is six tagged sections. The *Build HTML Report* script parses them into the one-line insight under each chart and the recommended actions in the email.
 
@@ -62,10 +62,3 @@ IMPORTANT:
 - Keep the output concise, natural and decision-focused.
 - Return only the six tagged sections with no additional explanation.
 ```
-
-## Design notes
-
-- **Fixed tags** (`[KPI]`, `[TREND]`, …) let the report script split the output reliably. A missing section is skipped, not an error.
-- **One sentence per section** keeps each insight readable in a few seconds inside the email.
-- **Facts supplied, not calculated.** The "use only the supplied facts" rule stops the model from inventing or recalculating numbers.
-- **`**bold**` markers** are converted to `<strong>` by the report script, so key figures stand out.
