@@ -47,14 +47,6 @@ In each case the agent decides whether to answer directly, ask a question, or qu
 
 
 ## 🧩 Workflow
-
-```
-Chat message
-   → AI Agent (decides to call the database tool)
-        → Sub-workflow: SQL generator → Validation → Execute → Format result → Log
-   → AI Agent writes the answer + chart spec → Format Response → chat reply with chart
-```
-
 ### Main workflow
 ![Main_Workflow](docs/main_workflow.png)
 
