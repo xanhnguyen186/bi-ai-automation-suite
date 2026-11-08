@@ -2,7 +2,7 @@
 
 **Every day it finds overdue orders, decides who owns the fix, and sends each team a short prioritised list. Every flagged order is logged for follow-up.**
 
-![Alert email to an owner team](docs/alert_email.png)
+![Alert email to an owner team](docs/email_alert.png)
 
 ## Overview
 
@@ -19,7 +19,7 @@ In many operations teams this is manual. Someone exports orders each morning, fi
 - **One email per owner team,** with a two-sentence summary, the response deadline and first action from the escalation table, and a ranked table of the worst orders
 - **An exception log** in Google Sheets: every flagged order with date, type, owner, severity, days overdue, state, seller and value
 
-![Exception log](docs/exception_log.png)
+![Exception log](docs/log.png)
 
 ## How exceptions are defined
 
@@ -37,7 +37,7 @@ Severity comes from days overdue (Normal, High, Critical). The cut-offs, the own
 
 ## Workflow
 
-![n8n workflow](docs/n8n_workflow.png)
+![n8n workflow](docs/delivery_workflow.png)
 
 | Node | What it does |
 |---|---|
@@ -81,8 +81,6 @@ Operational KPI design · SQL (CTEs, point-in-time logic) · SLA and escalation 
 - [`sql/`](sql/): the daily exception query and the monthly bottleneck analysis
 - [`scripts/`](scripts/): routing, message-building and log-preparation code
 - [`prompts/`](prompts/): the summary prompt
-- [`data/`](data/): the escalation table template
-- [`workflow/`](workflow/): the n8n workflow export
 - [`docs/`](docs/): screenshots
 
 [Back to the portfolio](../README.md)
