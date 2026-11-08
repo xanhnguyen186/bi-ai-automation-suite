@@ -12,6 +12,21 @@ Every month a manager needs the same answer: how did the business perform, what 
 
 **Stack:** n8n · Google Sheets · Python · QuickChart · OpenAI (GPT-5) · Gmail
 
+
+## ⚠️ The problem
+
+Monthly reporting is repetitive and easy to get wrong. Someone exports data, cleans it, rebuilds the same KPIs and charts, writes commentary and formats an email. Each step is a chance for a formula error, a stale chart or an inconsistent definition, and the whole cycle repeats every month.
+
+
+## 📦 What it delivers
+
+- **4 KPI cards:** net revenue, gross margin, total orders, return rate, each with its change against the previous month
+- **Top product and top store** of the month
+- **4 charts,** each with a one-line takeaway: revenue trend, revenue by category, top 5 subcategories, revenue by store
+- **3 recommended actions** based on what moved
+
+December 2024: net revenue 1,304,085 (+52.3%), gross margin 20.3% (-5.0 pts), 366 orders (+8.0%), return rate 7.7% (-0.6 pts).
+
 ## 🔄 From raw data to an approved report
 
 **1. The data lands.** About 4,000 order lines sit in a Google Sheet, with duplicates, mixed date formats and amounts stored as text. Nobody touches them.
@@ -28,29 +43,6 @@ Every month a manager needs the same answer: how did the business perform, what 
 
 The result is the email at the top of this page, produced with no manual spreadsheet work and one deliberate human check.
 
-## ⚠️ The problem
-
-Monthly reporting is repetitive and easy to get wrong. Someone exports data, cleans it, rebuilds the same KPIs and charts, writes commentary and formats an email. Each step is a chance for a formula error, a stale chart or an inconsistent definition, and the whole cycle repeats every month.
-
-## ⚙️ Why each step is automated
-
-| Manual step | What goes wrong | How the workflow handles it |
-|---|---|---|
-| Cleaning the export | Duplicate lines, mixed date formats, amounts stored as text, inconsistent status spelling | A cleaning script applies the same rules every run |
-| Rebuilding KPIs | Definitions drift; month-over-month changes are miscalculated | One KPI script, with fixed definitions, calculates every figure |
-| Making charts | Charts are copied from old files or built by hand | Four charts are generated from the new numbers on each run |
-| Writing commentary | Slow, and often just restates the numbers | An LLM writes one sentence per section from pre-calculated facts |
-| Formatting and sending | Layouts break in different email clients | A tested HTML template is built and sent automatically |
-| Checking before sending | Skipped when time is short | A built-in approval step makes the check part of the process |
-
-## 📦 What it delivers
-
-- **4 KPI cards:** net revenue, gross margin, total orders, return rate, each with its change against the previous month
-- **Top product and top store** of the month
-- **4 charts,** each with a one-line takeaway: revenue trend, revenue by category, top 5 subcategories, revenue by store
-- **3 recommended actions** based on what moved
-
-December 2024: net revenue 1,304,085 (+52.3%), gross margin 20.3% (-5.0 pts), 366 orders (+8.0%), return rate 7.7% (-0.6 pts).
 
 ## 🧩 Workflow
 
