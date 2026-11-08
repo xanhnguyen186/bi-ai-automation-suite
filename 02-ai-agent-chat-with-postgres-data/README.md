@@ -2,7 +2,7 @@
 
 **Ask questions about sales and delivery in plain English and get an answer with a chart. The model writes the SQL, and a validation layer decides whether it may run.**
 
-![Chart answer in the chat](docs/04_chart.png)
+![Chart answer in the chat](docs/chat_answer.png)
 
 ## Overview
 
