@@ -7,7 +7,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
 <table>
   <tr>
     <td width="300" valign="top">
-      <a href="01-automate-monthly-performance-report/"><img src="01-automate-monthly-performance-report/docs/thumbnail.png" width="280" alt="Executive report email"></a>
+      <a href="01-automate-monthly-performance-report/"><img src="01-automate-monthly-performance-report/docs/thumbnail1.png" width="280" alt="Executive report email"></a>
     </td>
     <td valign="top">
       <h3>📊 01 / Automate Monthly Retail Performance Reports with Google Sheets, GPT-5 &amp; Gmail Approval</h3>
@@ -19,7 +19,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
   </tr>
   <tr>
     <td width="300" valign="top">
-      <a href="02-ai-agent-chat-with-postgres-data/"><img src="02-ai-agent-chat-with-postgres-data/docs/thumbnail.png" width="280" alt="Analytics assistant answer with chart"></a>
+      <a href="02-ai-agent-chat-with-postgres-data/"><img src="02-ai-agent-chat-with-postgres-data/docs/thumbnail2.png" width="280" alt="Analytics assistant answer with chart"></a>
     </td>
     <td valign="top">
       <h3>💬 02 / AI Agent to Chat with E-commerce Sales &amp; Delivery Data using Text-to-SQL, Supabase &amp; OpenAI</h3>
@@ -31,7 +31,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
   </tr>
   <tr>
     <td width="300" valign="top">
-      <a href="03-automate-overdue-order-escalation/"><img src="03-automate-overdue-order-escalation/docs/thumbnail.png" width="280" alt="Overdue order alert email"></a>
+      <a href="03-automate-overdue-order-escalation/"><img src="03-automate-overdue-order-escalation/docs/thumbnail3.png" width="280" alt="Overdue order alert email"></a>
     </td>
     <td valign="top">
       <h3>🚨 03 / Automate Overdue Order Detection &amp; Team Escalation with PostgreSQL, Google Sheets &amp; AI Alerts</h3>
