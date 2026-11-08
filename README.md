@@ -2,7 +2,7 @@
 
 Three n8n workflows built on public retail and e-commerce data. They cover the loop a data or operations team runs every day: **report** on performance, **answer** questions about the data, and **flag** problems to the people who can fix them.
 
-## Explore the solutions
+## 🧭 Explore the solutions
 
 <table>
   <tr>
@@ -10,7 +10,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
       <a href="01-automate-monthly-performance-report/"><img src="01-automate-monthly-performance-report/docs/thumbnail.png" width="280" alt="Executive report email"></a>
     </td>
     <td valign="top">
-      <h3>01 / Automate Monthly Retail Performance Reports with Google Sheets, GPT-5 &amp; Gmail Approval</h3>
+      <h3>📊 01 / Automate Monthly Retail Performance Reports with Google Sheets, GPT-5 &amp; Gmail Approval</h3>
       <p>Automatically transforms retail performance data into a designed monthly email with KPIs, charts and AI-written commentary. A reviewer approves it before it is sent.</p>
       <p><b>Output:</b> Executive email report<br>
       <b>Stack:</b> n8n, Google Sheets, Python, OpenAI, QuickChart, Gmail</p>
@@ -22,7 +22,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
       <a href="02-ai-agent-chat-with-postgres-data/"><img src="02-ai-agent-chat-with-postgres-data/docs/thumbnail.png" width="280" alt="Analytics assistant answer with chart"></a>
     </td>
     <td valign="top">
-      <h3>02 / AI Agent to Chat with E-commerce Sales &amp; Delivery Data using Text-to-SQL, Supabase &amp; OpenAI</h3>
+      <h3>💬 02 / AI Agent to Chat with E-commerce Sales &amp; Delivery Data using Text-to-SQL, Supabase &amp; OpenAI</h3>
       <p>Lets internal teams explore order and delivery data through natural-language questions. The model writes the SQL, a validation layer checks it, and the answer comes back with a chart.</p>
       <p><b>Output:</b> Conversational insights<br>
       <b>Stack:</b> n8n, Supabase (PostgreSQL), text-to-SQL, OpenAI</p>
@@ -34,7 +34,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
       <a href="03-automate-overdue-order-escalation/"><img src="03-automate-overdue-order-escalation/docs/thumbnail.png" width="280" alt="Overdue order alert email"></a>
     </td>
     <td valign="top">
-      <h3>03 / Automate Overdue Order Detection &amp; Team Escalation with PostgreSQL, Google Sheets &amp; AI Alerts</h3>
+      <h3>🚨 03 / Automate Overdue Order Detection &amp; Team Escalation with PostgreSQL, Google Sheets &amp; AI Alerts</h3>
       <p>Finds overdue orders every day, works out who owns the fix using an escalation table, and sends each team a short prioritised list. Every flagged order is logged for follow-up.</p>
       <p><b>Output:</b> Operational alerts and an exception log<br>
       <b>Stack:</b> n8n, PostgreSQL, Google Sheets, OpenAI, Gmail</p>
@@ -43,7 +43,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
   </tr>
 </table>
 
-## What this demonstrates
+## 🎯 What this demonstrates
 
 - **Workflow automation:** end-to-end n8n pipelines with scheduling, branching, approval steps and logging
 - **SQL and data modelling:** order-level and KPI queries on a relational schema (PostgreSQL)
@@ -52,7 +52,7 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
 - **KPI and metric design:** explicit definitions, percentage-point changes, minimum sample sizes
 
 
-## Repository layout
+## 📁 Repository layout
 
 ```
 .
@@ -62,6 +62,6 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
 └── docs/                                     images
 ```
 
-## Author
+## 👤 Author
 
-Nhu Xuan Anh (Ann) Nguyen · [GitHub](https://github.com/xanhnguyen186) · [LinkedIn]([https://linkedin.com/in/YOUR-PROFILE](https://www.linkedin.com/in/ann-nguyen-545556316/))
+Nhu Xuan Anh (Ann) Nguyen · [GitHub](https://github.com/xanhnguyen186) · [LinkedIn](https://www.linkedin.com/in/ann-nguyen-545556316/)
