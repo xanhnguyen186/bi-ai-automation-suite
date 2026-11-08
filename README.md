@@ -1,4 +1,4 @@
-![Business Intelligence & AI Automation Suite](docs/banner.png)
+# Business Intelligence & AI Automation Suite
 
 Three n8n workflows built on public retail and e-commerce data. They cover the loop a data or operations team runs every day: **report** on performance, **answer** questions about the data, and **flag** problems to the people who can fix them.
 
