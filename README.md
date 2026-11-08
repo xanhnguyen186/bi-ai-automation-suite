@@ -59,7 +59,6 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
 ├── 01-automate-monthly-performance-report/   scripts, prompt, screenshots
 ├── 02-ai-agent-chat-with-postgres-data/      prompts, validation and formatting code
 ├── 03-automate-overdue-order-escalation/     SQL, routing code, workflow export
-└── docs/                                     images
 ```
 
 ## 👤 Author
