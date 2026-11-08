@@ -46,7 +46,7 @@ For each question it returns a short written answer, a bar, line or pie chart wh
 In each case the agent decides whether to answer directly, ask a question, or query the database, and every database query goes through the same validation.
 
 
-## 🧩 How it works
+## 🧩 Workflow
 
 ```
 Chat message
@@ -55,7 +55,7 @@ Chat message
    → AI Agent writes the answer + chart spec → Format Response → chat reply with chart
 ```
 
-### 🗨️ Main workflow
+### Main workflow
 ![Main_Workflow](docs/main_workflow.png)
 
 | Node | What it does |
@@ -67,7 +67,7 @@ Chat message
 | Structured Output Parser | Forces the reply into a fixed JSON shape: answer text plus optional chart spec |
 | Format Response (Code) | Validates the chart spec and builds the chart image link |
 
-### 🗄️ Sub-workflow: the database tool
+### Sub-workflow: the database tool
 ![Sub_Workflow](docs/sub_workflow.png)
 
 | Node | What it does |
