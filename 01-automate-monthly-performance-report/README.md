@@ -20,7 +20,7 @@ Every month a manager needs the same answer: how did the business perform, what 
 
 **3. A person reviews it before anyone else sees it.** The finished report goes to the reviewer, followed by an approval request that pauses the workflow until they respond.
 
-![Approval request email](docs/approval_request_email.png)
+![Approval request email](docs/approval_email.png)
 
 *The approval email. Nothing is sent to the recipients until the reviewer approves.*
 
@@ -54,7 +54,7 @@ December 2024: net revenue 1,304,085 (+52.3%), gross margin 20.3% (-5.0 pts), 36
 
 ## Workflow
 
-![n8n workflow](docs/n8n_workflow.png)
+![n8n workflow](docs/workflow.png)
 
 | # | Node | Type | What it does |
 |---|---|---|---|
