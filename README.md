@@ -51,25 +51,17 @@ Three n8n workflows built on public retail and e-commerce data. They cover the l
 - **Operations thinking:** SLAs, severity levels, escalation routing and an audit trail
 - **KPI and metric design:** explicit definitions, percentage-point changes, minimum sample sizes
 
-## Data
-
-| Project | Dataset |
-|---|---|
-| 01 | [Lotus Group Retail Star Schema BI](https://www.kaggle.com/datasets/abdelrahmanmahmoud22/lotus-group-retail-star-schema-bi) (fictional retailer, one year of orders) |
-| 02 and 03 | [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (about 100,000 orders, 2016 to 2018) |
-
-The data is public and historical, so the projects replay it as if it were live. No datasets or credentials are stored in this repository.
 
 ## Repository layout
 
 ```
 .
-├── 01-automate-monthly-performance-report/   scripts, prompt, workflow export, screenshots
-├── 02-ai-agent-chat-with-postgres-data/      prompts, validation and formatting code, workflow export
-├── 03-automate-overdue-order-escalation/     SQL, routing code, escalation table, workflow export
-└── docs/                                     banner image
+├── 01-automate-monthly-performance-report/   scripts, prompt, screenshots
+├── 02-ai-agent-chat-with-postgres-data/      prompts, validation and formatting code
+├── 03-automate-overdue-order-escalation/     SQL, routing code, workflow export
+└── docs/                                     images
 ```
 
 ## Author
 
-Xanh · [GitHub](https://github.com/YOUR-USERNAME) · [LinkedIn](https://linkedin.com/in/YOUR-PROFILE)
+Nhu Xuan Anh (Ann) Nguyen · [GitHub](https://github.com/xanhnguyen186) · [LinkedIn]([https://linkedin.com/in/YOUR-PROFILE](https://www.linkedin.com/in/ann-nguyen-545556316/))
