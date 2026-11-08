@@ -14,19 +14,19 @@ Operations and sales teams ask the same questions repeatedly: what was revenue l
 
 **1. It starts with a greeting.** A greeting does not need the database, so the agent answers directly, says what it can cover (orders, delivered revenue, on-time rate, top categories and states, trends and comparisons) and which dates the data spans. No query is run.
 
-![Greeting](docs/01_greeting.png)
+![Greeting](docs/greeting.png)
 
 **2. A direct question gets a direct answer.** Asked to count total orders, the agent calls the database tool once, the generated SQL passes validation, and the answer comes back in one line with the date range. The question, the SQL and the outcome are logged.
 
-![Total order count](docs/02_order_count.png)
+![Total order count](docs/direct.png)
 
 **3. When a question is unclear, it asks.** "Top sold products?" could mean units or revenue, over any period. The agent asks which measure and which period, and it also explains a limit of the data: there are product IDs and categories but no product names. It offers the two alternatives it can answer, top categories or top product IDs.
 
-![Clarifying question](docs/03_clarification.png)
+![Clarifying question](docs/clarification.png)
 
 **4. It uses the conversation, and charts the answer.** The reply to that clarification was "Then show me top categories by delivered revenue in 2018". The agent runs the query, names the leading categories with their revenue in the text, and shows the top 10 as a bar chart built by a script from the validated result.
 
-![Top categories chart](docs/04_chart.png)
+![Top categories chart](docs/chart.png)
 
 In each case the agent decides whether to answer directly, ask a question, or query the database, and every database query goes through the same validation.
 
@@ -55,6 +55,7 @@ Chat message
 ```
 
 ### Main workflow
+![Main_Workflow](docs/main_workflow.png)
 
 | Node | What it does |
 |---|---|
@@ -66,6 +67,7 @@ Chat message
 | Format Response (Code) | Validates the chart spec and builds the chart image link |
 
 ### Sub-workflow: the database tool
+![Sub_Workflow](docs/sub_workflow.png)
 
 | Node | What it does |
 |---|---|
@@ -101,7 +103,6 @@ Text-to-SQL · LLM agents and tool use · Prompt design with schema and examples
 
 - [`prompts/`](prompts/): agent and SQL generator system prompts
 - [`scripts/`](scripts/): validation, result formatting and chart-building code
-- [`workflow/`](workflow/): the n8n workflow exports (main and sub-workflow)
 - [`docs/`](docs/): screenshots
 
 [Back to the portfolio](../README.md)
