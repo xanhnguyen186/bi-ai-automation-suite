@@ -6,13 +6,13 @@
 
 *The report as the recipients receive it: KPIs, four charts, AI-written takeaways and recommended actions.*
 
-## Overview
+## 📋 Overview
 
 Every month a manager needs the same answer: how did the business perform, what changed and what should we do about it. This workflow produces that answer from raw sales data and delivers it as a designed email, with no manual spreadsheet work. A reviewer approves the report before it reaches its recipients.
 
 **Stack:** n8n · Google Sheets · Python · QuickChart · OpenAI (GPT-5) · Gmail
 
-## From raw data to an approved report
+## 🔄 From raw data to an approved report
 
 **1. The data lands.** About 4,000 order lines sit in a Google Sheet, with duplicates, mixed date formats and amounts stored as text. Nobody touches them.
 
@@ -28,11 +28,11 @@ Every month a manager needs the same answer: how did the business perform, what 
 
 The result is the email at the top of this page, produced with no manual spreadsheet work and one deliberate human check.
 
-## The problem
+## ⚠️ The problem
 
 Monthly reporting is repetitive and easy to get wrong. Someone exports data, cleans it, rebuilds the same KPIs and charts, writes commentary and formats an email. Each step is a chance for a formula error, a stale chart or an inconsistent definition, and the whole cycle repeats every month.
 
-## Why each step is automated
+## ⚙️ Why each step is automated
 
 | Manual step | What goes wrong | How the workflow handles it |
 |---|---|---|
@@ -43,7 +43,7 @@ Monthly reporting is repetitive and easy to get wrong. Someone exports data, cle
 | Formatting and sending | Layouts break in different email clients | A tested HTML template is built and sent automatically |
 | Checking before sending | Skipped when time is short | A built-in approval step makes the check part of the process |
 
-## What it delivers
+## 📦 What it delivers
 
 - **4 KPI cards:** net revenue, gross margin, total orders, return rate, each with its change against the previous month
 - **Top product and top store** of the month
@@ -52,7 +52,7 @@ Monthly reporting is repetitive and easy to get wrong. Someone exports data, cle
 
 December 2024: net revenue 1,304,085 (+52.3%), gross margin 20.3% (-5.0 pts), 366 orders (+8.0%), return rate 7.7% (-0.6 pts).
 
-## Workflow
+## 🧩 Workflow
 
 ![n8n workflow](docs/workflow.png)
 
@@ -72,7 +72,7 @@ December 2024: net revenue 1,304,085 (+52.3%), gross margin 20.3% (-5.0 pts), 36
 
 If the reviewer rejects the report, the workflow ends and nothing is sent.
 
-## Key decisions
+## 🔑 Key decisions
 
 **The AI never does the maths.** The KPI script calculates every figure first and hands the model short fact lists. The model only writes one sentence per section, in a tagged format that the report script parses. The insights can't contain invented numbers, and a missing section doesn't break the email.
 
@@ -84,19 +84,19 @@ If the reviewer rejects the report, the workflow ends and nothing is sent.
 
 **The email is built for real inboxes.** Table-based HTML with inline CSS, a mobile layout, fallbacks for gradients and transparency, and a size far below Gmail's clipping limit. Charts are images because email can't run JavaScript.
 
-## Data cleaning
+## 🧹 Data cleaning
 
 Duplicate lines, mixed date formats (ISO, DD/MM/YYYY, timestamps, Excel serials), amounts stored as text, stray spaces, inconsistent order-status spelling and missing employee or product fields were all handled before any KPI was calculated. The cleaning, KPI and report steps are Python scripts written without imports, because n8n's sandbox does not allow them, so dates, number formatting and text parsing are hand-built.
 
-## Skills demonstrated
+## 🛠️ Skills demonstrated
 
 Workflow automation (n8n) · Python for data cleaning and KPI logic · Google Sheets · KPI and metric design · Data validation and reconciliation · Data visualisation · LLM prompt design and output parsing · Human-in-the-loop design · HTML email development
 
-## Data and limitations
+## 🗂️ Data and limitations
 
 Dataset: [Lotus Group Retail Star Schema BI](https://www.kaggle.com/datasets/abdelrahmanmahmoud22/lotus-group-retail-star-schema-bi) (Kaggle). It is a fictional retailer with one year of orders in EGP, so the numbers are for demonstration. Month-over-month changes are not adjusted for seasonality.
 
-## Repository contents
+## 📁 Repository contents
 
 - [`scripts/`](scripts/): cleaning, KPI and report scripts
 - [`prompts/`](prompts/): the LLM prompt
